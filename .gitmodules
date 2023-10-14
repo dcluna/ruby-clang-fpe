@@ -1,0 +1,3 @@
+[submodule "clang-fpe"]
+	path = vendor/clang-fpe
+	url = git@github.com:dcluna/clang-fpe.git
