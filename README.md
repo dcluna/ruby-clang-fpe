@@ -1,24 +1,19 @@
 # RubyClangFpe
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ruby_clang_fpe`. To experiment with that code, run `bin/console` for an interactive prompt.
-
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+Add the following to the application's Gemfile:
 
-Install the gem and add to the application's Gemfile by executing:
-
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+    gem 'ruby_clang_fpe', github: 'dcluna/ruby-clang-fpe', submodules: true
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+fpe3_key = RubyClangFpe::FpeKey.generate_key(:ff3, "EF4359D8D580AA4F7F036D6F04FC6A942B7E151628AED2A6ABF7158809CF4F3C", "9A768A92F60E12D8", 26)
+
+fpe3_key.encrypt("89012123456789000000789000000") # => "30859239999374053872365555822"
+fpe3_key.decrypt("30859239999374053872365555822") # => "89012123456789000000789000000"
+```
 
 ## Development
 
@@ -28,7 +23,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/dcluna/ruby_clang_fpe.
+Bug reports and pull requests are welcome on GitHub at https://github.com/dcluna/ruby-clang-fpe.
 
 ## License
 
